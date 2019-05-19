@@ -1,0 +1,11 @@
+08:51:53 **** Build of configuration Release for project 0_OUTPUT ****
+make all 
+Invoking: GNU ARM Cross Print Size
+arm-none-eabi-size --format=berkeley "0_OUTPUT.elf"
+   text	   data	    bss	    dec	    hex	filename
+    784	      8	   1568	   2360	    938	0_OUTPUT.elf
+Finished building: 0_OUTPUT.siz
+ 
+
+08:51:54 Build Finished. 0 errors, 0 warnings. (took 770ms)
+
