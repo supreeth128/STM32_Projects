@@ -1,228 +1,41 @@
-09:40:25 **** Incremental Build of configuration Debug for project 0_OUTPUT ****
-make all 
-Building file: ../src/main.c
-Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building file: ../src/stm2f407xx_gpio_driver.c
-Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"src/stm2f407xx_gpio_driver.d" -MT"src/stm2f407xx_gpio_driver.o" -c -o "src/stm2f407xx_gpio_driver.o" "../src/stm2f407xx_gpio_driver.c"
-Finished building: ../src/stm2f407xx_gpio_driver.c
- 
-Building target: 0_OUTPUT.elf
-Invoking: GNU ARM Cross C++ Linker
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T "/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/ld/STM32F407VGTx_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"0_OUTPUT.map" --specs=nano.specs -o "0_OUTPUT.elf"  ./sys/src/startup_stm32f407xx.o ./sys/src/system_stm32f4xx.o  ./src/main.o ./src/stm2f407xx_gpio_driver.o   
-Finished building target: 0_OUTPUT.elf
- 
-Invoking: GNU ARM Cross Create Flash Image
-arm-none-eabi-objcopy -O ihex "0_OUTPUT.elf"  "0_OUTPUT.hex"
-Finished building: 0_OUTPUT.hex
- 
-Invoking: GNU ARM Cross Print Size
-arm-none-eabi-size --format=berkeley "0_OUTPUT.elf"
-   text	   data	    bss	    dec	    hex	filename
-    800	      8	   1568	   2376	    948	0_OUTPUT.elf
-Finished building: 0_OUTPUT.siz
- 
-13:31:50 **** Clean-only build of configuration Release for project 0_OUTPUT ****
+12:58:18 **** Clean-only build of configuration Debug for project 0_BLINKY ****
 make clean 
-rm -rf  ./sys/src/startup_stm32f407xx.o ./sys/src/system_stm32f4xx.o  ./src/main.o  0_OUTPUT.hex  0_OUTPUT.siz  ./sys/src/startup_stm32f407xx.d  ./sys/src/system_stm32f4xx.d  ./src/main.d  0_OUTPUT.elf
+rm -rf  ./sys/src/startup_stm32f407xx.o ./sys/src/system_stm32f4xx.o  ./src/main.o ./src/stm2f407xx_gpio_driver.o  0_OUTPUT.hex  0_OUTPUT.siz  ./sys/src/startup_stm32f407xx.d  ./sys/src/system_stm32f4xx.d  ./src/main.d ./src/stm2f407xx_gpio_driver.d  0_OUTPUT.elf
  
-13:31:51 **** Incremental Build of configuration Release for project 0_OUTPUT ****
+12:58:19 **** Build of configuration Debug for project 0_BLINKY ****
 make all 
 Building file: ../sys/src/startup_stm32f407xx.S
 Invoking: GNU ARM Cross Assembler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -x assembler-with-cpp -DNDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -MMD -MP -MF"sys/src/startup_stm32f407xx.d" -MT"sys/src/startup_stm32f407xx.o" -c -o "sys/src/startup_stm32f407xx.o" "../sys/src/startup_stm32f407xx.S"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -x assembler-with-cpp -DSTM32F407xx -DDEBUG -I"/home/super/Desktop/STM32_Projects/0_BLINKY/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/inc" -MMD -MP -MF"sys/src/startup_stm32f407xx.d" -MT"sys/src/startup_stm32f407xx.o" -c -o "sys/src/startup_stm32f407xx.o" "../sys/src/startup_stm32f407xx.S"
 Finished building: ../sys/src/startup_stm32f407xx.S
  
 Building file: ../sys/src/system_stm32f4xx.c
 Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"sys/src/system_stm32f4xx.d" -MT"sys/src/system_stm32f4xx.o" -c -o "sys/src/system_stm32f4xx.o" "../sys/src/system_stm32f4xx.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_BLINKY/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/inc" -std=gnu11 -MMD -MP -MF"sys/src/system_stm32f4xx.d" -MT"sys/src/system_stm32f4xx.o" -c -o "sys/src/system_stm32f4xx.o" "../sys/src/system_stm32f4xx.c"
 Finished building: ../sys/src/system_stm32f4xx.c
  
 Building file: ../src/main.c
 Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_BLINKY/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/inc" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
 Finished building: ../src/main.c
  
 Building file: ../src/stm2f407xx_gpio_driver.c
 Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"src/stm2f407xx_gpio_driver.d" -MT"src/stm2f407xx_gpio_driver.o" -c -o "src/stm2f407xx_gpio_driver.o" "../src/stm2f407xx_gpio_driver.c"
-../src/stm2f407xx_gpio_driver.c: In function 'GPIO_Clock_Enable':
-../src/stm2f407xx_gpio_driver.c:65:10: error: switch quantity not an integer
-  switch (pGPIOx) {
-          ^~~~~~
-../src/stm2f407xx_gpio_driver.c:66:3: error: pointers are not permitted as case values
-   case GPIOA:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:67:20: warning: implicit declaration of function '_BV' [-Wimplicit-function-declaration]
-    RCC->AHB1ENR |= _BV(0);
-                    ^~~
-../src/stm2f407xx_gpio_driver.c:69:3: error: pointers are not permitted as case values
-   case GPIOB:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:72:3: error: pointers are not permitted as case values
-   case GPIOC:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:75:3: error: pointers are not permitted as case values
-   case GPIOD:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:78:3: error: pointers are not permitted as case values
-   case GPIOE:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:81:3: error: pointers are not permitted as case values
-   case GPIOF:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:84:3: error: pointers are not permitted as case values
-   case GPIOG:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:87:3: error: pointers are not permitted as case values
-   case GPIOH:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:90:3: error: pointers are not permitted as case values
-   case GPIOI:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:63:38: warning: parameter 'pGPIOx' set but not used [-Wunused-but-set-parameter]
- void GPIO_Clock_Enable(GPIO_TypeDef *pGPIOx)
-                        ~~~~~~~~~~~~~~^~~~~~
-../src/stm2f407xx_gpio_driver.c: In function 'GPIO_Clock_Disable':
-../src/stm2f407xx_gpio_driver.c:113:10: error: switch quantity not an integer
-  switch (pGPIOx) {
-          ^~~~~~
-../src/stm2f407xx_gpio_driver.c:114:3: error: pointers are not permitted as case values
-   case GPIOA:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:117:3: error: pointers are not permitted as case values
-   case GPIOB:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:120:3: error: pointers are not permitted as case values
-   case GPIOC:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:123:3: error: pointers are not permitted as case values
-   case GPIOD:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:126:3: error: pointers are not permitted as case values
-   case GPIOE:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:129:3: error: pointers are not permitted as case values
-   case GPIOF:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:132:3: error: pointers are not permitted as case values
-   case GPIOG:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:135:3: error: pointers are not permitted as case values
-   case GPIOH:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:138:3: error: pointers are not permitted as case values
-   case GPIOI:
-   ^~~~
-../src/stm2f407xx_gpio_driver.c:111:39: warning: parameter 'pGPIOx' set but not used [-Wunused-but-set-parameter]
- void GPIO_Clock_Disable(GPIO_TypeDef *pGPIOx)
-                         ~~~~~~~~~~~~~~^~~~~~
-../src/stm2f407xx_gpio_driver.c: In function 'GPIO_Init':
-../src/stm2f407xx_gpio_driver.c:161:37: warning: unused parameter 'pGPIOHandle' [-Wunused-parameter]
- void GPIO_Init(GPIO_Handle_TypeDef *pGPIOHandle)
-                ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-make: *** [src/stm2f407xx_gpio_driver.o] Error 1
-src/subdir.mk:21: recipe for target 'src/stm2f407xx_gpio_driver.o' failed
-"make all" terminated with exit code 2. Build might be incomplete.
-13:44:50 **** Incremental Build of configuration Release for project 0_OUTPUT ****
-make all 
-Building file: ../src/stm2f407xx_gpio_driver.c
-Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"src/stm2f407xx_gpio_driver.d" -MT"src/stm2f407xx_gpio_driver.o" -c -o "src/stm2f407xx_gpio_driver.o" "../src/stm2f407xx_gpio_driver.c"
-../src/stm2f407xx_gpio_driver.c: In function 'GPIO_Clock_Enable':
-../src/stm2f407xx_gpio_driver.c:66:19: warning: implicit declaration of function '_BV' [-Wimplicit-function-declaration]
-   RCC->AHB1ENR |= _BV(0);
-                   ^~~
-../src/stm2f407xx_gpio_driver.c: In function 'GPIO_Init':
-../src/stm2f407xx_gpio_driver.c:137:37: warning: unused parameter 'pGPIOHandle' [-Wunused-parameter]
- void GPIO_Init(GPIO_Handle_TypeDef *pGPIOHandle)
-                ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_BLINKY/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/inc" -std=gnu11 -MMD -MP -MF"src/stm2f407xx_gpio_driver.d" -MT"src/stm2f407xx_gpio_driver.o" -c -o "src/stm2f407xx_gpio_driver.o" "../src/stm2f407xx_gpio_driver.c"
 Finished building: ../src/stm2f407xx_gpio_driver.c
  
-Building target: 0_OUTPUT.elf
+Building target: 0_BLINKY.elf
 Invoking: GNU ARM Cross C++ Linker
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -T "/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/ld/STM32F407VGTx_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"0_OUTPUT.map" --specs=nano.specs -o "0_OUTPUT.elf"  ./sys/src/startup_stm32f407xx.o ./sys/src/system_stm32f4xx.o  ./src/main.o ./src/stm2f407xx_gpio_driver.o   
-Finished building target: 0_OUTPUT.elf
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T "/home/super/Desktop/STM32_Projects/0_BLINKY/sys/ld/STM32F407VGTx_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"0_BLINKY.map" --specs=nano.specs -o "0_BLINKY.elf"  ./sys/src/startup_stm32f407xx.o ./sys/src/system_stm32f4xx.o  ./src/main.o ./src/stm2f407xx_gpio_driver.o   
+Finished building target: 0_BLINKY.elf
  
 Invoking: GNU ARM Cross Create Flash Image
-arm-none-eabi-objcopy -O ihex "0_OUTPUT.elf"  "0_OUTPUT.hex"
-Finished building: 0_OUTPUT.hex
+arm-none-eabi-objcopy -O ihex "0_BLINKY.elf"  "0_BLINKY.hex"
+Finished building: 0_BLINKY.hex
  
 Invoking: GNU ARM Cross Print Size
-arm-none-eabi-size --format=berkeley "0_OUTPUT.elf"
+arm-none-eabi-size --format=berkeley "0_BLINKY.elf"
    text	   data	    bss	    dec	    hex	filename
-    784	      8	   1568	   2360	    938	0_OUTPUT.elf
-Finished building: 0_OUTPUT.siz
- 
-13:45:30 **** Incremental Build of configuration Release for project 0_OUTPUT ****
-make all 
-Building file: ../src/main.c
-Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building file: ../src/stm2f407xx_gpio_driver.c
-Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"src/stm2f407xx_gpio_driver.d" -MT"src/stm2f407xx_gpio_driver.o" -c -o "src/stm2f407xx_gpio_driver.o" "../src/stm2f407xx_gpio_driver.c"
-../src/stm2f407xx_gpio_driver.c: In function 'GPIO_Init':
-../src/stm2f407xx_gpio_driver.c:137:37: warning: unused parameter 'pGPIOHandle' [-Wunused-parameter]
- void GPIO_Init(GPIO_Handle_TypeDef *pGPIOHandle)
-                ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-Finished building: ../src/stm2f407xx_gpio_driver.c
- 
-Building target: 0_OUTPUT.elf
-Invoking: GNU ARM Cross C++ Linker
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -T "/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/ld/STM32F407VGTx_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"0_OUTPUT.map" --specs=nano.specs -o "0_OUTPUT.elf"  ./sys/src/startup_stm32f407xx.o ./sys/src/system_stm32f4xx.o  ./src/main.o ./src/stm2f407xx_gpio_driver.o   
-Finished building target: 0_OUTPUT.elf
- 
-Invoking: GNU ARM Cross Create Flash Image
-arm-none-eabi-objcopy -O ihex "0_OUTPUT.elf"  "0_OUTPUT.hex"
-Finished building: 0_OUTPUT.hex
- 
-Invoking: GNU ARM Cross Print Size
-arm-none-eabi-size --format=berkeley "0_OUTPUT.elf"
-   text	   data	    bss	    dec	    hex	filename
-    784	      8	   1568	   2360	    938	0_OUTPUT.elf
-Finished building: 0_OUTPUT.siz
- 
-13:46:05 **** Incremental Build of configuration Release for project 0_OUTPUT ****
-make all 
-Building file: ../src/stm2f407xx_gpio_driver.c
-Invoking: GNU ARM Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -DNDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"src/stm2f407xx_gpio_driver.d" -MT"src/stm2f407xx_gpio_driver.o" -c -o "src/stm2f407xx_gpio_driver.o" "../src/stm2f407xx_gpio_driver.c"
-Finished building: ../src/stm2f407xx_gpio_driver.c
- 
-Building target: 0_OUTPUT.elf
-Invoking: GNU ARM Cross C++ Linker
-arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra  -g -T "/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/ld/STM32F407VGTx_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"0_OUTPUT.map" --specs=nano.specs -o "0_OUTPUT.elf"  ./sys/src/startup_stm32f407xx.o ./sys/src/system_stm32f4xx.o  ./src/main.o ./src/stm2f407xx_gpio_driver.o   
-Finished building target: 0_OUTPUT.elf
- 
-Invoking: GNU ARM Cross Create Flash Image
-arm-none-eabi-objcopy -O ihex "0_OUTPUT.elf"  "0_OUTPUT.hex"
-Finished building: 0_OUTPUT.hex
- 
-Invoking: GNU ARM Cross Print Size
-arm-none-eabi-size --format=berkeley "0_OUTPUT.elf"
-   text	   data	    bss	    dec	    hex	filename
-    784	      8	   1568	   2360	    938	0_OUTPUT.elf
-Finished building: 0_OUTPUT.siz
- 
-13:50:03 **** Incremental Build of configuration Release for project 0_OUTPUT ****
-make all 
-Invoking: GNU ARM Cross Print Size
-arm-none-eabi-size --format=berkeley "0_OUTPUT.elf"
-   text	   data	    bss	    dec	    hex	filename
-    784	      8	   1568	   2360	    938	0_OUTPUT.elf
-Finished building: 0_OUTPUT.siz
- 
-08:51:53 **** Build of configuration Release for project 0_OUTPUT ****
-make all 
-Invoking: GNU ARM Cross Print Size
-arm-none-eabi-size --format=berkeley "0_OUTPUT.elf"
-   text	   data	    bss	    dec	    hex	filename
-    784	      8	   1568	   2360	    938	0_OUTPUT.elf
-Finished building: 0_OUTPUT.siz
+    800	      8	   1568	   2376	    948	0_BLINKY.elf
+Finished building: 0_BLINKY.siz
  

@@ -43,8 +43,8 @@
  *
  ************************************************************************************/
 
-#ifndef __GPIO_DRIVER_H__
-#define __GPIO_DRIVER_H__
+#ifndef __STM32F407XX_GPIO_DRIVER_H__
+#define __STM32F407XX_GPIO_DRIVER_H__
 
 #include<stdbool.h>
 #include "stm32f407xx.h"
@@ -362,7 +362,7 @@ void GPIO_IRQ_Handler(void);
 
 
 
-#endif				/* __GPIO_DRIVER_H__ */
+#endif				/* __STM32F407XX_GPIO_DRIVER_H__ */
 
 
 

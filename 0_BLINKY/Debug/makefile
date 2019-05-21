@@ -44,38 +44,38 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_FLASH += \
-0_OUTPUT.hex \
+0_BLINKY.hex \
 
 SECONDARY_SIZE += \
-0_OUTPUT.siz \
+0_BLINKY.siz \
 
 
 # All Target
-all: 0_OUTPUT.elf secondary-outputs
+all: 0_BLINKY.elf secondary-outputs
 
 # Tool invocations
-0_OUTPUT.elf: $(OBJS) $(USER_OBJS)
+0_BLINKY.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU ARM Cross C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T "/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/ld/STM32F407VGTx_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"0_OUTPUT.map" --specs=nano.specs -o "0_OUTPUT.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T "/home/super/Desktop/STM32_Projects/0_BLINKY/sys/ld/STM32F407VGTx_FLASH.ld" -Xlinker --gc-sections -Wl,-Map,"0_BLINKY.map" --specs=nano.specs -o "0_BLINKY.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-0_OUTPUT.hex: 0_OUTPUT.elf
+0_BLINKY.hex: 0_BLINKY.elf
 	@echo 'Invoking: GNU ARM Cross Create Flash Image'
-	arm-none-eabi-objcopy -O ihex "0_OUTPUT.elf"  "0_OUTPUT.hex"
+	arm-none-eabi-objcopy -O ihex "0_BLINKY.elf"  "0_BLINKY.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-0_OUTPUT.siz: 0_OUTPUT.elf
+0_BLINKY.siz: 0_BLINKY.elf
 	@echo 'Invoking: GNU ARM Cross Print Size'
-	arm-none-eabi-size --format=berkeley "0_OUTPUT.elf"
+	arm-none-eabi-size --format=berkeley "0_BLINKY.elf"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(SECONDARY_FLASH)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS) 0_OUTPUT.elf
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(SECONDARY_FLASH)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS) 0_BLINKY.elf
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_SIZE)

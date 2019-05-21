@@ -48,7 +48,7 @@
 
 /* Arduino style macro for accessing individual bit masks */
 
-#define _BV(bit)	(1UL << (bit))
+#define _BV(bit)	(1U << (bit))
 
 #define ENABLE	1
 #define DISABLE	0

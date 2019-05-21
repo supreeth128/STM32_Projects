@@ -1,7 +1,0 @@
-#ifndef __GPIO_DRIVER_H__
-#define __GPIO_DRIVER_H__
-
-#include<stdint.h>
-
-
-#endif				//__GPIO_DRIVER_H__

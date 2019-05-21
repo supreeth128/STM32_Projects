@@ -24,14 +24,14 @@ C_DEPS += \
 sys/src/%.o: ../sys/src/%.S
 	@echo 'Building file: $<'
 	@echo 'Invoking: GNU ARM Cross Assembler'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -x assembler-with-cpp -DSTM32F407xx -DDEBUG -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -x assembler-with-cpp -DSTM32F407xx -DDEBUG -I"/home/super/Desktop/STM32_Projects/0_BLINKY/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/inc" -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 sys/src/%.o: ../sys/src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GNU ARM Cross C Compiler'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_OUTPUT/sys/inc" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DSTM32F407xx -I"/home/super/Desktop/STM32_Projects/0_BLINKY/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/cmsis/inc" -I"/home/super/Desktop/STM32_Projects/0_BLINKY/sys/inc" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
