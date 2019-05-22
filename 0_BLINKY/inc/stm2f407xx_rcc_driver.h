@@ -59,15 +59,78 @@
  *
  ************************************************************************************/
 
-#define	RCC_GPIOA_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOAEN_Pos))
-#define	RCC_GPIOB_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOBEN_Pos))
-#define	RCC_GPIOC_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOCEN_Pos))
-#define	RCC_GPIOD_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIODEN_Pos))
-#define	RCC_GPIOE_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOEEN_Pos))
-#define	RCC_GPIOF_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOFEN_Pos))
-#define	RCC_GPIOG_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOGEN_Pos))
-#define	RCC_GPIOH_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOHEN_Pos))
-#define	RCC_GPIOI_CLK_ENABLE()	(RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOIEN_Pos))
+#define	RCC_GPIOA_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOAEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIOAEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
+#define	RCC_GPIOB_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOBEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIOBEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
+#define	RCC_GPIOC_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOCEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIOCEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
+#define	RCC_GPIOD_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIODEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIODEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
+#define	RCC_GPIOE_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOEEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIOEEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
+#define	RCC_GPIOF_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOFEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIOFEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
+#define	RCC_GPIOG_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOGEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIOGEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
+#define	RCC_GPIOH_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOHEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIOHEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
+#define	RCC_GPIOI_CLK_ENABLE()	do { \
+                                    volatile uint32_t temp; \
+                                    RCC->AHB1ENR |= (1U << RCC_AHB1ENR_GPIOIEN_Pos); \
+                                    /* Dummy delay for clock stabilization */ \
+                                    temp = RCC->AHB1ENR & (1U << RCC_AHB1ENR_GPIOIEN_Pos); \
+                                    UNUSED(temp); \
+                                } while (0U)
+
 
 
 #define	RCC_GPIOA_CLK_DISABLE()	(RCC->AHB1ENR &= ~(1U << RCC_AHB1ENR_GPIOAEN_Pos))

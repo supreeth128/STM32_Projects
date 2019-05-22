@@ -49,6 +49,7 @@
 #include<stdbool.h>
 #include "stm32f407xx.h"
 #include "stm2f407xx_gpio_driver.h"
+#include "stm2f407xx_rcc_driver.h"
 
 void Init_LED(void);
 
@@ -61,6 +62,8 @@ int main(void)
 		GPIOD->ODR &= ~0xFFFF;
 		for (uint32_t i = 0; i < 100000; i++);
 	}
+
+	RCC_GPIOA_CLK_ENABLE();
 
 }
 
