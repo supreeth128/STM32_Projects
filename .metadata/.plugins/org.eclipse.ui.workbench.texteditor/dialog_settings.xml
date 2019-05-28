@@ -2,12 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="AHB1EN" key="selection"/>
+		<item value="SYSCFG" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="SYSCFG"/>
+			<item value="EXTI"/>
+			<item value="GPIO_PIN_MODES"/>
+			<item value="GPIO_PIN_PULL_UP_PULL_DOWN_CONFIGS"/>
+			<item value="GPIO"/>
+			<item value="mod"/>
+			<item value="GPIOA"/>
 			<item value="RCC_AHB1ENR_GPIOAEN_Pos"/>
 			<item value="AHB1EN"/>
 			<item value="IRQ"/>
@@ -16,11 +23,6 @@
 			<item value="__I "/>
 			<item value="__O"/>
 			<item value="__I"/>
-			<item value="GPIO_T"/>
-			<item value="GPIOA"/>
-			<item value="GPIO_Typ"/>
-			<item value="SystemIn"/>
-			<item value="system"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -29,7 +31,7 @@
 		<item value="348" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="440" key="DIALOG_HEIGHT"/>
-		<item value="738" key="DIALOG_X_ORIGIN"/>
-		<item value="271" key="DIALOG_Y_ORIGIN"/>
+		<item value="940" key="DIALOG_X_ORIGIN"/>
+		<item value="300" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
